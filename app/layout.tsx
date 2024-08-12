@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
-import { Nunito } from 'next/font/google';
 import { ClerkProvider } from '@clerk/nextjs';
-import './globals.css';
 
-const font = Nunito({ subsets: ['latin'] });
+import { fonts } from '@/app/fonts';
+import '@/app/globals.css';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,9 +15,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body className={font.className}>{children}</body>
+    <ClerkProvider
+      appearance={{
+        variables: {
+          fontSize: '0.875rem',
+          borderRadius: '0.5rem',
+          colorPrimary: 'hsl(142, 71%, 45%)',
+        },
+      }}
+    >
+      <html lang="ru">
+        <body className={`${fonts} flex flex-col font-sans`}>{children}</body>
       </html>
     </ClerkProvider>
   );

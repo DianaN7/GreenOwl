@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button';
+import NextLink from 'next/link';
 import {
   ClerkLoaded,
   ClerkLoading,
@@ -8,35 +8,56 @@ import {
   UserButton,
 } from '@clerk/nextjs';
 import { Loader } from 'lucide-react';
-import SVGlogo from '@/public/logo.svg';
+import { Button } from '@/components/ui/button';
 
-import Image from 'next/image';
+import SVGlogo from '@/public/logo.svg';
+import GithubSVG from '@/public/img/github.svg';
 
 export const Header = () => {
   return (
-    <header className="h-20 w0full border-b-2 border-slate-200 px-4">
-      <div className="lg:max-w-screen-lg mx-auto flex items-center justify-between h-full ">
-        <div className="pt-8 pl-4 pb-7 flex items-center gap-x-3">
-          <Image src="/logo.svg" height={40} width={40} alt="logo" />
-          <h1 className="text-2xl font-extrabold text-green-600 tracking-wide">
-            Green Owl
-          </h1>
+    <header className="relative flex justify-center">
+      <div className="z-1 flex w-full items-center justify-between gap-2 px-2 sm:px-8">
+        <div className="flex flex-1 items-center justify-start gap-1 max-sm:hidden">
+          <Button variant="ghost" size="icon" asChild>
+            <a
+              href="https://github.com/DianaN7/GreenOwl"
+              target="_blank"
+              aria-label="GitHub repo"
+              title="GitHub repo"
+            >
+              <GithubSVG className="size-6" />
+            </a>
+          </Button>
+          {/* <ThemeToggle /> */}
         </div>
-        <ClerkLoading>
-          <Loader className="h-5 w-5 text-muted-foreground animate-spin" />
-        </ClerkLoading>
-        <ClerkLoaded>
-          <SignedIn>
-            <UserButton />
-          </SignedIn>
-          <SignedOut>
-            <SignInButton mode="modal">
-              <Button size="lg" variant="ghost">
-                Login
-              </Button>
-            </SignInButton>
-          </SignedOut>
-        </ClerkLoaded>
+        <NextLink
+          href="/"
+          className="focus-visible group flex h-16 w-14 flex-col items-center gap-1 rounded-b-3xl bg-secondary/30 px-[6px] pt-2 text-2xl transition-colors hover:bg-primary/25 dark:bg-card dark:hover:bg-border/70 sm:size-32 sm:rounded-b-4xl sm:pt-4 sm:text-3xl lg:w-40 lg:text-4xl"
+          title="GreenOwl"
+        >
+          <SVGlogo className="w-[1.5em] group-hover:animate-bounce" />
+          <span className="font-display -tracking-widest max-sm:sr-only">
+            GreenOwl
+          </span>
+        </NextLink>
+        <div className="flex flex-1 items-center justify-end">
+          <ClerkLoading>
+            <Loader className="h-5 w-5 text-muted-foreground animate-spin" />
+          </ClerkLoading>
+          <ClerkLoaded>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
+            <SignedOut>
+              <SignInButton mode="modal">
+                <Button variant="ghost">Войти</Button>
+              </SignInButton>
+            </SignedOut>
+          </ClerkLoaded>
+        </div>
+      </div>
+      <div className="fixed bottom-4 right-4 z-50 sm:hidden">
+        {/* <ThemeToggle className="size-12 border border-solid border-border bg-card/40 backdrop-blur-lg"></ThemeToggle> */}
       </div>
     </header>
   );

@@ -3,38 +3,43 @@ import { Slot } from '@radix-ui/react-slot';
 import { cva, type VariantProps } from 'class-variance-authority';
 
 import { cn } from '@/lib/utils';
-
 const buttonVariants = cva(
-  'inline-flex items-center justify-center whitespace-nowrap rounded-xl text-sm font-bold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 uppercase tracking-wide',
+  'inline-flex items-center justify-center whitespace-nowrap rounded-xl text-base font-bold uppercase tracking-wide ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:bg-disabled disabled:text-disabled-foreground disabled:border-transparent',
   {
     variants: {
       variant: {
         default:
-          'bg-white text-black border-slate-200 border-2 border-b-4 active:border-b-2 hover:bg-slate-100 text-slate-500',
+          'bg-card text-card-foreground border-2 border-b-4 hover:bg-border/50 active:border-b-2 dark:hover:bg-border/70',
         primary:
-          'bg-sky-400 text-primary-foreground hover:bg-sky-400/90 border-sky-500 border-b-4 active:border-b-0',
-        primaryOutline: 'bg-white text-sky-500 hover:bg-slate-100',
+          'bg-primary text-primary-foreground border-b-4 border-primary-depth hover:bg-primary/90 active:border-b-0',
         secondary:
-          'bg-green-500 text-primary-foreground hover:bg-green-500/90 border-green-600 border-b-4 active:border-b-0',
-        secondaryOutline: 'bg-white text-green-500 hover:bg-slate-100',
+          'bg-secondary text-secondary-foreground border-b-4 border-secondary-depth hover:bg-secondary/90 active:border-b-0',
         danger:
-          'bg-rose-500 text-primary-foreground hover:bg-rose-500/90 border-rose-600 border-b-4 active:border-b-0',
-        dangerOutline: 'bg-white text-rose-500 hover:bg-slate-100',
+          'bg-destructive text-destructive-foreground border-b-4 border-destructive-depth hover:bg-destructive/90 active:border-b-0',
         super:
-          'bg-indigo-500 text-primary-foreground hover:bg-indigo-500/90 border-indigo-600 border-b-4 active:border-b-0',
-        superOutline: 'bg-white text-indigo-500 hover:bg-slate-100',
+          'bg-super text-super-foreground border-b-4 border-super-depth hover:bg-super/90 active:border-b-0',
+        highlight:
+          'bg-highlight-depth/75 text-super-foreground border-b-4 border-highlight-depth hover:bg-highlight-depth/65 active:border-b-0',
+        golden:
+          'bg-amber-300 text-amber-700 border-b-4 border-amber-400 hover:bg-amber-300/90 active:border-b-0',
+        locked:
+          'bg-neutral-200 text-neutral-400 border-b-4 border-current hover:bg-neutral-200/90 active:border-b-0 dark:bg-disabled dark:text-disabled-foreground dark:hover:bg-disabled/90',
         ghost:
-          'bg-transparent text-slate-500 border-transparent border-0 hover:bg-slate-100',
-        sidebar:
-          'bg-transparent text-slate-500 border-2 border-transparent hover:bg-slate-100 transition-none',
-        sidebarOutline:
-          'bg-sky-500/15 text-sky-500 border-sky-300 border-2 hover:bg-sky-500/20 transition-none',
+          'bg-transparent border-2 border-transparent hover:bg-black/5 dark:bg-white/[0.015] dark:hover:bg-white/5',
+        immersive:
+          'bg-transparent text-current border-2 border-b-4 border-black/20 hover:opacity-85 active:border-b-0',
+        active:
+          'bg-secondary/15 text-secondary border-2 border-b-4 border-secondary/80 hover:bg-secondary/20',
+        correct:
+          'bg-green-500/15 text-green-500 border-2 border-b-4 border-green-500/80 hover:bg-green-500/20',
+        incorrect:
+          'bg-destructive/15 text-destructive border-2 border-b-4 border-destructive/80 hover:bg-destructive/20',
       },
       size: {
         default: 'h-11 px-4 py-2',
         sm: 'h-9 px-3',
-        lg: 'h-12 px-8',
-        icon: 'h-10 w-10',
+        lg: 'h-14 px-8',
+        icon: 'h-11 w-11',
         none: '',
         rounded: 'rounded-full',
       },
