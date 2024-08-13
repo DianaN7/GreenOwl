@@ -1,4 +1,4 @@
-import NextLink from 'next/link';
+import NextLink from 'next/link'
 import {
   ClerkLoaded,
   ClerkLoading,
@@ -6,12 +6,12 @@ import {
   SignedOut,
   SignInButton,
   UserButton,
-} from '@clerk/nextjs';
-import { Loader } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+} from '@clerk/nextjs'
+import { Loader } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 
-import SVGlogo from '@/public/logo.svg';
-import GithubSVG from '@/public/img/github.svg';
+import SVGlogo from '@/public/logo.svg'
+import GithubSVG from '@/public/img/github.svg'
 
 export const Header = () => {
   return (
@@ -32,17 +32,15 @@ export const Header = () => {
         </div>
         <NextLink
           href="/"
-          className="focus-visible group flex h-16 w-14 flex-col items-center gap-1 rounded-b-3xl bg-secondary/30 px-[6px] pt-2 text-2xl transition-colors hover:bg-primary/25 dark:bg-card dark:hover:bg-border/70 sm:size-32 sm:rounded-b-4xl sm:pt-4 sm:text-3xl lg:w-40 lg:text-4xl"
+          className="focus-visible group flex h-16 w-14 flex-col items-center gap-1 rounded-b-3xl bg-secondary/30 px-[6px] pt-2 text-2xl transition-colors hover:bg-primary/25 dark:bg-card dark:hover:bg-border/70 sm:size-32 sm:rounded-b-4xl sm:pt-4 sm:text-3xl lg:w-44 lg:text-4xl"
           title="GreenOwl"
         >
           <SVGlogo className="w-[1.5em] group-hover:animate-bounce" />
-          <span className="font-display -tracking-widest max-sm:sr-only">
-            GreenOwl
-          </span>
+          <span className="font-display -tracking-widest max-sm:sr-only">GreenOwl</span>
         </NextLink>
         <div className="flex flex-1 items-center justify-end">
           <ClerkLoading>
-            <Loader className="h-5 w-5 text-muted-foreground animate-spin" />
+            <Loader className="h-5 w-5 animate-spin text-muted-foreground" />
           </ClerkLoading>
           <ClerkLoaded>
             <SignedIn>
@@ -60,5 +58,5 @@ export const Header = () => {
         {/* <ThemeToggle className="size-12 border border-solid border-border bg-card/40 backdrop-blur-lg"></ThemeToggle> */}
       </div>
     </header>
-  );
-};
+  )
+}
