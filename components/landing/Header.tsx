@@ -9,6 +9,7 @@ import {
 } from '@clerk/nextjs'
 import { Loader } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { ThemeToggle } from '@/components/theme/toggle'
 
 import SVGlogo from '@/public/logo.svg'
 import GithubSVG from '@/public/img/github.svg'
@@ -28,11 +29,11 @@ export const Header = () => {
               <GithubSVG className="size-6" />
             </a>
           </Button>
-          {/* <ThemeToggle /> */}
+          <ThemeToggle />
         </div>
         <NextLink
           href="/"
-          className="focus-visible group flex h-16 w-14 flex-col items-center gap-1 rounded-b-3xl bg-secondary/30 px-[6px] pt-2 text-2xl transition-colors hover:bg-primary/25 dark:bg-card dark:hover:bg-border/70 sm:size-32 sm:rounded-b-4xl sm:pt-4 sm:text-3xl lg:w-44 lg:text-4xl"
+          className="focus-visible group flex h-16 w-14 flex-col items-center gap-1 rounded-b-3xl bg-secondary/30 px-[6px] pt-2 text-2xl transition-colors hover:bg-primary/25 dark:bg-card dark:hover:bg-border/70 sm:size-36 sm:rounded-b-4xl sm:pt-4 sm:text-3xl lg:w-44 lg:text-4xl"
           title="GreenOwl"
         >
           <SVGlogo className="w-[1.5em] group-hover:animate-bounce" />
@@ -55,7 +56,7 @@ export const Header = () => {
         </div>
       </div>
       <div className="fixed bottom-4 right-4 z-50 sm:hidden">
-        {/* <ThemeToggle className="size-12 border border-solid border-border bg-card/40 backdrop-blur-lg"></ThemeToggle> */}
+        <ThemeToggle className="size-12 border border-solid border-border bg-card/40 backdrop-blur-lg"></ThemeToggle>
       </div>
     </header>
   )

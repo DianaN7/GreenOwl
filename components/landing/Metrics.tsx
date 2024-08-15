@@ -35,7 +35,7 @@ export function Metrics({ children }: PropsWithChildren) {
           <MetricsItem
             className="bg-primary-light"
             number={1000}
-            description="веселого контента"
+            description="часов веселого контента"
             offset={20}
             progress={scrollYProgress}
           >
@@ -69,9 +69,9 @@ export function Metrics({ children }: PropsWithChildren) {
         <li className="sticky top-[20%] col-start-1 col-end-13 pb-8 sm:col-start-2 sm:col-end-9 sm:pb-16 lg:top-[5%] lg:pb-40">
           <MetricsItem
             className="bg-gradient-to-b from-primary to-primary-depth to-80%"
-            number={93}
+            number={100}
             suffix="%"
-            description="заговорить за два месяца"
+            description="заговорить на новом языке"
             offset={20}
             progress={scrollYProgress}
             last

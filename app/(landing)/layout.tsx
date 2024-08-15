@@ -1,11 +1,7 @@
-import { Footer } from '@/components/landing/Footer'
 import { Header } from '@/components/landing/Header'
+import { Footer } from '@/components/landing/Footer'
 
-type Props = {
-  children: React.ReactNode
-}
-
-const MarketingLayout = ({ children }: Props) => {
+export default function LandingLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="container flex flex-grow flex-col px-0">
       <Header />
@@ -14,5 +10,3 @@ const MarketingLayout = ({ children }: Props) => {
     </div>
   )
 }
-
-export default MarketingLayout

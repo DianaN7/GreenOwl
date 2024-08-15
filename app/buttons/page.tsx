@@ -1,11 +1,13 @@
 import { Button } from '@/components/ui/button'
-// import { ThemeToggle } from '@/components/theme/toggle'
+import { ThemeToggle } from '@/components/theme/toggle'
 import { LessonButtons } from './lessonbutton'
 
 const ButtonsPage = () => {
   return (
     <div className="space-y-6">
-      <div className="mx-12 mt-8">{/* <ThemeToggle className="text-3xl" /> */}</div>
+      <div className="mx-12 mt-8">
+        <ThemeToggle className="text-3xl" />
+      </div>
 
       <div className="flex flex-wrap items-center justify-center gap-6 p-4">
         <Button disabled>Disabled</Button>
@@ -33,3 +35,4 @@ const ButtonsPage = () => {
 }
 
 export default ButtonsPage
+

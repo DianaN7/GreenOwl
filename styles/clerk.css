@@ -9,7 +9,7 @@
 .cl-userButtonPopoverCard,
 .cl-selectSearchInput__countryCode,
 .cl-selectOptionsContainer__countryCode {
-  @apply  !border-2 !border-input bg-background;
+  @apply !border-2 !border-input bg-background;
 }
 
 .cl-headerTitle,
@@ -24,10 +24,10 @@
 .cl-navbar h1,
 .cl-breadcrumbsItem.cl-breadcrumbsItem__currentPage,
 .cl-userPreviewTextContainer,
-.cl-profileSectionContent div>p,
+.cl-profileSectionContent div > p,
 .cl-form p,
 .cl-accordionTriggerButton {
-  @apply dark: text-foreground;
+  @apply dark:text-foreground;
 }
 
 .cl-headerSubtitle,
@@ -58,16 +58,16 @@ p[data-localization-key='userProfile.profilePage.successMessage'] {
 .cl-formButtonPrimary,
 .cl-formFieldInput,
 .cl-selectSearchInput__countryCode {
-  @apply h-11 rounded-lg ring-offset-background focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
+  @apply h-11 rounded-lg ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
 }
 
 .cl-formFieldInput,
 .cl-selectSearchInput__countryCode {
-  @apply flex w-full text-foreground file: border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground disabled:cursor-not-allowed;
+  @apply flex w-full text-foreground file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground disabled:cursor-not-allowed;
 }
 
 .cl-formButtonPrimary {
-  @apply inline-flex items-center justify-center whitespace-nowrap bg-primary px-3 text-base font-medium text-primary-foreground transition-colors hover: bg-primary/90;
+  @apply inline-flex items-center justify-center whitespace-nowrap bg-primary px-3 text-base font-medium text-primary-foreground transition-colors hover:bg-primary/90;
 }
 
 .cl-formFieldInput {
@@ -83,7 +83,7 @@ p[data-localization-key='userProfile.profilePage.successMessage'] {
 }
 
 .cl-footerActionLink {
-  @apply text-accent-foreground underline hover: text-accent-foreground/90;
+  @apply text-accent-foreground underline hover:text-accent-foreground/90;
 }
 
 .cl-otpCodeFieldInput {
@@ -91,7 +91,7 @@ p[data-localization-key='userProfile.profilePage.successMessage'] {
 }
 
 .cl-formResendCodeLink {
-  @apply text-primary disabled: opacity-90;
+  @apply text-primary disabled:opacity-90;
 }
 
 .cl-internal-icon,
@@ -100,31 +100,31 @@ p[data-localization-key='userProfile.profilePage.successMessage'] {
 }
 
 .cl-fileDropAreaBox {
-  @apply dark: bg-gray-900;
+  @apply dark:bg-gray-900;
 }
 
 .cl-fileDropAreaIconBox {
-  @apply dark: bg-gray-800;
+  @apply dark:bg-gray-800;
 }
 
 .cl-fileDropAreaIcon {
-  @apply dark: text-gray-400;
+  @apply dark:text-gray-400;
 }
 
 .cl-fileDropAreaButtonPrimary {
-  @apply h-10 px-4 py-2 text-foreground transition-colors hover: bg-secondary hover:text-accent-foreground;
+  @apply h-10 px-4 py-2 text-foreground transition-colors hover:bg-secondary hover:text-accent-foreground;
 }
 
 .cl-userButtonPopoverActionButton,
 .cl-accordionTriggerButton {
-  @apply hover: text-accent-foreground;
+  @apply hover:text-accent-foreground;
 }
 
 .cl-modalCloseButton,
 .cl-navbarButton,
 .cl-navbarMobileMenuButton,
 .cl-menuItem {
-  @apply  !text-foreground hover: bg-muted;
+  @apply !text-foreground hover:bg-muted;
 }
 
 .cl-navbarButton.cl-active {
@@ -134,16 +134,16 @@ p[data-localization-key='userProfile.profilePage.successMessage'] {
 .cl-profileSectionPrimaryButton,
 .cl-menuButton,
 .cl-formButtonReset {
-  @apply hover: bg-primary/5;
+  @apply hover:bg-primary/5;
 }
 
 .cl-profileSectionPrimaryButton__danger {
-  @apply bg-destructive !text-destructive-foreground hover: bg-destructive/60;
+  @apply bg-destructive !text-destructive-foreground hover:bg-destructive/60;
 }
 
 .cl-cardBox,
 .cl-userButtonPopoverCard {
-  @apply rounded-lg !border-transparent shadow-md dark:  !border-border;
+  @apply rounded-lg !border-transparent shadow-md dark:!border-border;
 }
 
 .cl-card,
@@ -156,7 +156,7 @@ p[data-localization-key='userProfile.profilePage.successMessage'] {
 }
 
 .cl-userButtonPopoverFooter a {
-  @apply hover: text-muted-foreground;
+  @apply hover:text-muted-foreground;
 }
 
 .cl-badge {
@@ -165,15 +165,15 @@ p[data-localization-key='userProfile.profilePage.successMessage'] {
 
 .cl-avatarImageActionsUpload,
 .cl-badge[data-color='primary'] {
-  @apply text-foreground/80 dark: border dark:border-input dark:shadow-none;
+  @apply text-foreground/80 dark:border dark:border-input dark:shadow-none;
 }
 
 .cl-badge[data-localization-key='badge__unverified'] {
-  @apply border bg-transparent text-destructive dark: text-red-500;
+  @apply border bg-transparent text-destructive dark:text-red-500;
 }
 
 .cl-modalBackdrop {
-  @apply backdrop-blur-sm dark: bg-background/25;
+  @apply backdrop-blur-sm dark:bg-background/25;
 }
 
 .cl-avatarBox {
@@ -190,5 +190,5 @@ p[data-localization-key='userProfile.profilePage.successMessage'] {
 }
 
 .cl-providerIcon__github {
-  @apply dark: invert;
+  @apply dark:invert;
 }

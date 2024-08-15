@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { ClerkProvider } from '@clerk/nextjs'
+import { ThemeProvider } from '@/components/theme/provider'
 import { sharedMetadata } from '@/config/metadata'
 
 import { fonts } from '@/styles/fonts'
@@ -31,8 +32,12 @@ export default function RootLayout({
         },
       }}
     >
-      <html lang="ru">
-        <body className={`${fonts} flex flex-col font-sans`}>{children}</body>
+      <html lang="ru" suppressHydrationWarning>
+        <body className={`${fonts} flex flex-col font-sans`}>
+          <ThemeProvider attribute='class' enableSystem disableTransitionOnChange>
+          {children}
+          </ThemeProvider>
+        </body>
       </html>
     </ClerkProvider>
   )
