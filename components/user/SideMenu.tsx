@@ -24,9 +24,9 @@ export function SideMenu() {
         </NextLink>
         <ul className="flex flex-col gap-y-2">
           <SideMenuItem href="/learn" icon="learn" label="Уроки" />
-          {/* <SideMenuItem href="/leaderboard" icon="leaderboard" label="Leaderboard" />
-          <SideMenuItem href="/quests" icon="quests" label="Quests" />
-          <SideMenuItem href="/shop" icon="shop" label="Shop" /> */}
+          <SideMenuItem href="/leaderboard" icon="leaderboard" label="Рейтинг" />
+          <SideMenuItem href="/quests" icon="quests" label="Задания" />
+          <SideMenuItem href="/shop" icon="shop" label="Магазин" />
         </ul>
       </nav>
       <div className="space-y-2 border-t-2 px-4 pb-2 pt-2 sm:max-lg:px-2">
